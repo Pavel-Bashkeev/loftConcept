@@ -1,77 +1,91 @@
-.navigation{
+.navigation {
   position: absolute;
   top: 50px;
   left: 0;
+  &.open-menu {
+    .menu{
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+      transition: all .3s ease-in-out;
+    }
+  }
 }
-.menu{
+.menu {
   position: relative;
   border: 1px solid rgb(2, 121, 101);
   background-color: var(--white);
   padding: 10px;
   border-radius: 10px;
-  &__item{
-    &:not(:last-child){
+  box-shadow: 0px 1px 5px #555555;
+  transform: translateX(-40px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  &__item {
+    &:not(:last-child) {
       margin-bottom: 15px;
     }
   }
   &__btn,
-  &__link{
+  &__link {
     padding: 5px 10px;
-    font:400 18px/22px var(--font);
-    color:var(--gray-800);
-    transition: all .3s ease-in-out;
+    font: 400 18px/22px var(--font);
+    color: var(--gray-800);
+    transition: all 0.3s ease-in-out;
     display: block;
     width: 100%;
     text-align: left;
     position: relative;
     padding-right: 20px;
-    &::before{
-      content: '';
+    white-space: nowrap;
+    &::before {
+      content: "";
       position: absolute;
       bottom: 0px;
       left: 0;
       width: 0%;
       height: 3px;
       background-color: #48a5c1;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
-    &:hover{
-      &::before{
+    &:hover {
+      &::before {
         width: 100%;
       }
-      &::after{
+      &::after {
         background-color: #48a5c1;
       }
       color: #48a5c1;
     }
   }
-  &__btn{
-    &.active{
-      &::before{
+  &__btn {
+    &.active {
+      &::before {
         width: 100%;
       }
-      &::after{
+      &::after {
         background-color: #48a5c1;
       }
     }
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       width: 15px;
       height: 15px;
       position: absolute;
-      top:50%;
+      top: 50%;
       right: 0px;
       transform: translateY(-50%);
       clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 48% 100%, 75% 50%, 50% 0);
-      transition: all .05s ease-in-out .3s;
+      transition: all 0.05s ease-in-out 0.3s;
     }
   }
-  .menu{
+  .menu {
     position: absolute;
     left: 100%;
-    top:0;
+    top: 0;
     display: none;
-    &.open-submenu{
+    &.open-submenu {
       display: block;
     }
   }
