@@ -1,0 +1,21 @@
+.header-actions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  margin-left: auto;
+  &__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__icon{
+    width:  30px;
+
+  }
+  &__text{
+    display: block;
+    color:var(--gray-200);
+    font:600 14px/16px var(--font);
+  }
+}

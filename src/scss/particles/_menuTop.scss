@@ -1,0 +1,47 @@
+.menu-top {
+  margin-right: 80px;
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--gray-200);
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--gray-400);
+    }
+  }
+  &__icon {
+    display: block;
+    object-fit: cover;
+  }
+  &__box {
+    display: block;
+    &--contacts {
+      .menu-top__icon {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    &--delivery {
+      .menu-top__icon {
+        width: 37px;
+        height: 26px;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    font: 600 14px/16px var(--font);
+    color: inherit;
+  }
+}

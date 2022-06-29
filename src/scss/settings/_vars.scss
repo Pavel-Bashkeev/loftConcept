@@ -1,0 +1,34 @@
+%bg-cover{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+%bg-contain{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+:root{
+  //fonts
+	--font: 'openSans';
+  //color
+  --primary: #FF5A30;
+  --white: #ffffff;
+  --black: #000000;
+  --gray-900: #1E212C;
+  --gray-800: #424551;
+  --gray-700: #787A80;
+  --gray-600: #9A9CA5;
+  --gray-400: #b5b5b5;
+  --gray-200: #F4F5F6;
+  // offset
+  --mission-gap: 94px;
+  //shadow
+  --shadow-light: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  --shadow-middle:0px 80px 80px -20px rgba(154, 156, 165, 0.32), 0px 30px 24px -10px rgba(154, 156, 165, 0.1), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  --shadow-large: 0px 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  //transition
+  --tr-main: all .3s ease-in-out;
+  --tr-slider: all 1.5s ease-in-out;
+}

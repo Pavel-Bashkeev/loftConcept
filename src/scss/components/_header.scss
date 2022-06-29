@@ -1,0 +1,26 @@
+.header{
+  padding: 15px 0;
+  &-top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &__lang{
+      margin-right: 30px;
+    }
+  }
+  &-bottom{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &__box{
+      position: relative;
+    }
+  }
+}
+@import '../particles/langChoice';
+@import '../particles/menuTop';
+@import '../particles/headerContacts';
+@import '../particles/menuBtn';
+@import '../particles/logo';
+@import '../particles/headerSearch';
+@import '../particles/headerActions';
