@@ -22,5 +22,6 @@ function closeAllsubMenu(current = null) {
   const subMenuAll = document.querySelectorAll('.menu .menu');
   Array.from(subMenuAll).forEach(item => {
     (item != current && !parrentsNode.includes(item)) ? item.classList.remove('open-submenu'): '';
+    
   })
 }
