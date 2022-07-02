@@ -1,5 +1,8 @@
 .menu-top {
   margin-right: 80px;
+  @media (max-width:650px) {
+    display: none;
+  }
   &__list {
     display: flex;
     align-items: center;
@@ -12,7 +15,10 @@
   &__link {
     display: flex;
     align-items: center;
-    gap: 5px;
+    @media (max-width:960px) {
+      flex-direction: column;
+    }
+      gap: 5px;
     color: var(--gray-200);
     transition: color 0.3s ease-in-out;
     &:hover {

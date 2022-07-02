@@ -1,7 +1,30 @@
 .logo{
   width: fit-content;
   margin-bottom: -12px;
+  @media (max-width:960px) {
+    position: absolute;
+    top:17px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width:650px) {
+    transform: translateX(0);
+    left: 80px;
+    top: 10px;
+  }
   &__img{
     display: block;
+    &--desktop{
+      @media (max-width:960px) {
+        display: none;
+      }
+    }
+    &--mob{
+      display: none;
+      @media (max-width:960px) {
+        display: block;
+        width: 100px;
+      }
+    }
   }
 }

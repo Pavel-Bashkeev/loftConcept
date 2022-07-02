@@ -14,7 +14,11 @@
     gap: 20px;
     &__box{
       position: relative;
+      @media (max-width:950px) {
+        position: static;
+      }
     }
+
   }
 }
 @import '../particles/langChoice';
