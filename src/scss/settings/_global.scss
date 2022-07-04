@@ -21,6 +21,14 @@ img {
 	width: 100%;
 	height: auto;
 }
+img:not([src]):not([srcset]) {
+  visibility: hidden;
+}
+p,h1,h2,h3,h4,h5,h6{
+	&::first-letter{
+		text-transform: uppercase;
+	}
+}
 body {
 	background: linear-gradient( 90deg, #015384, #339e99);
 	font: 400 20px / 24px var(--font);
@@ -60,4 +68,9 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
-
+.main{
+	border-radius:  0 0 30px 30px;
+	background-color: var(--white);
+	padding:  40px 0;
+}
+@import '../particles/breadcrumbs';

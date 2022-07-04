@@ -21,8 +21,40 @@
       gap: 5px;
     color: var(--gray-200);
     transition: color 0.3s ease-in-out;
+    position: relative;
+    &--contacts{
+      &::after{
+        display: none;
+      }
+    }
+    &::after{
+      content: '';
+      width: 0;
+      height: 2px;
+      background-color: var(--gray-200);
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      transition: width .3s ease-in-out;
+    }
     &:hover {
-      color: var(--gray-400);
+     &::after{
+      width: 100%;
+     }
+     .menu-top__box--contacts{
+      svg{
+        overflow: visible;
+        #marker-map{
+          animation: jumpMarker .9s linear infinite;
+        }
+      }
+     }
+    }
+    &--active{
+      pointer-events: none;
+      &::after{
+        width: 100%;
+       }
     }
   }
   &__icon {
@@ -50,4 +82,9 @@
     font: 600 14px/16px var(--font);
     color: inherit;
   }
+}
+@keyframes jumpMarker {
+  0%   {transform: translateY(0)}
+  40%  {transform: translateY(-10px)}
+  100% {transform: translateY(0)}
 }

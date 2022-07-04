@@ -1,5 +1,7 @@
 .header{
   padding: 15px 0;
+  margin-bottom: 30px;
+  
   &-top{
     display: flex;
     align-items: center;
@@ -18,8 +20,21 @@
         position: static;
       }
     }
-
+  
   }
+
+  // &.show{
+  //   position: fixed;
+  //   top:0;
+  //   left: 0;
+  //   width: 100%;
+  //   transform: translateY(0);
+  //   z-index: 10;
+  //   background: rgba(0,0,0, 0.5);
+  // }
+  // &.show.hide{
+  //   transform: translateY(-200%);
+  // }
 }
 @import '../particles/langChoice';
 @import '../particles/menuTop';
