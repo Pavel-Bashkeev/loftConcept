@@ -1,5 +1,8 @@
 .subcategory{
-  
+  &__title{
+    font:700 40px/50px var(--font);
+    color:var(--gray-800);text-align: center;
+  }
 }
 .subcategory-wrapper{
   display: grid;
