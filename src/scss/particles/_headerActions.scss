@@ -14,14 +14,16 @@
   }
   &__icon{
     width:  30px;
-
+    @media (max-width:650px) {
+      width: 20px;
+    }
   }
   &__text{
     display: block;
     color:var(--gray-200);
-    font:600 14px/16px var(--font);
+    font:600 13px/16px var(--font);
     @media (max-width:650px) {
-      font-size: 12px;
+      font-size: 11px;
     line-height: 18px;
     }
   }

@@ -7,6 +7,7 @@ import { showMenu } from './components/menu.js';
 import { showSearch } from './components/showSearch.js';
 import lazyImages from './modules/lazyImages.js';
 import { choiceViewCatalog } from './components/choiceViewCatalog.js';
+import { showMenuCharacter } from './components/showMenuCharacter.js';
 // import { headerShowScrolling } from './components/headerShowScroll.js';
 // import * as webpSupportFunctions from './modules/webpSupport.js';
 // import linkSmooth from './helpers/linkSmooth.js';
@@ -17,7 +18,7 @@ documentReady(() => {
   showMenu();
   showSearch();
   lazyImages();
-
+  showMenuCharacter();
   document.querySelector(".subcategory-content") ? choiceViewCatalog() : '';
   // linkSmooth();
 
