@@ -13,6 +13,7 @@ import { choicePproductPrivew } from './components/choice.ProductPreview.js';
 // import * as webpSupportFunctions from './modules/webpSupport.js';
 // import linkSmooth from './helpers/linkSmooth.js';
 import {Modal} from './plugins/plugModal.js';
+import { showAddServicesWindow } from "./components/showAddServicesWindow.js";
 
 documentReady(() => {
   console.log('ready');
@@ -22,6 +23,8 @@ documentReady(() => {
   showMenuCharacter();
   document.querySelector(".subcategory-content") ? choiceViewCatalog() : '';
   document.querySelector('.product-preview__img') ? choicePproductPrivew() : '';
+  showAddServicesWindow();
+
   // linkSmooth();
 
  

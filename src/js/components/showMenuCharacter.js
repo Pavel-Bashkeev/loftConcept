@@ -1,7 +1,6 @@
 const characterBtns = document.querySelectorAll(".menu-character__btn");
 
 export const showMenuCharacter = () => {
-  console.dir(window.outerWidth, window.innerWidth)
   characterBtns.forEach((item) => {
     item.addEventListener("click", () => {
       const characterMenu = item.nextElementSibling;
