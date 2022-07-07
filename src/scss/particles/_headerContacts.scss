@@ -1,7 +1,7 @@
 .header-contact {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
   width: 100%;
   @media (max-width:420px) {
     gap:10px;
@@ -9,32 +9,36 @@
   &__link {
     display: flex;
     align-items: stretch;
+    justify-content: space-between;
     background-color: #2960b3;
     color: var(--white);
     transition: all 0.3s ease-in-out;
     padding: 5px 10px;
     gap: 5px;
     border-radius: 10px;
+    max-width: 175px;
+    width: 100%;
     &:hover {
       box-shadow: 0px 0px 5px rgb(48, 48, 48);
-      transform: scale(1.01);
       .header-contact__icon--whatsapp{
         color: #39ae41;
+        transform: scale(1);
       }
       .header-contact__icon--phone{
         animation: buzzing .6s ease-in-out infinite;
       }
+      .header-contact__icon--mail{
+        transform: scale(1);
+      }
     }
     &:first-child {
-      margin-right: auto;
-      @media (max-width:960px) {
-        margin-left: auto;
-        margin-right: 0;
-      }
+      margin-left: auto;
     }
   }
   &__icon {
     display: block;
+    transform: scale(0.8);
+    transition: all .3s ease-in-out;
     &--mail {
       width: 30px;
       height: 24px;
@@ -50,7 +54,7 @@
   }
   &__text {
     color: inherit;
-    font: 400 14px/16px var(--font);
+    font: 400 12px/14px var(--font);
     align-self: center;
     @media (max-width:960px) {
       display: none;

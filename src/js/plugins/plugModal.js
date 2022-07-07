@@ -16,9 +16,10 @@ export class Modal {
 	events() {
 		if (this.modal) {
 			document.addEventListener('click', (event) => {
-				const clickedElement = event.target.closest('[data-btn-modal]');
+				const clickedElement = event.target.closest('[data-modal-btn]');
 				if (clickedElement) {
-					let target = clickedElement.dataset.btnModal;
+					let target = clickedElement.dataset.modalBtn;
+					console.log(target);
 					let animation = clickedElement.dataset.animation;
 					let speed = clickedElement.dataset.speed;
 

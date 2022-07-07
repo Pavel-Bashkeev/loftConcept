@@ -8,14 +8,17 @@
 @import "./components/header";
 @import "./components/navigation";
 @import "./particles/mainMenu";
+
+@import "./components/product";
+
 @import "./components/footer";
 
 
 // page subcategory
-@import './components/subCategorySection';
+// @import './components/subCategorySection';
 
 // particles
-@import './particles/filtres';
-@import './particles/sort';
+// @import './particles/filtres';
+// @import './particles/sort';
 // Plugins
-// @import './plagins/pluginModal';
+@import './plagins/pluginModal';
