@@ -1,0 +1,34 @@
+.product-another{
+  position: relative;
+  &__title{
+    margin:0 0 40px;
+    padding: 0 15px 15px;
+    border-bottom: 3px dashed var(--gray-800);
+    font:700 25px/30px var(--font);
+    color: var(--gray-800);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__slider-controls{
+
+  }
+}
+.another-slider{
+  position: relative;
+  &__container{overflow: hidden;
+    position:relative;
+    padding: 15px 10px;
+    margin: 0 -10px;}
+
+  &__slide{
+    .card-product{
+      max-width: 100%;
+    }
+  }
+}
+.swiper-slide-active{
+  .card-product{
+    box-shadow: 0 0 10px rgba(0,0,0, .9);
+    transform: scale(1.005);
+  }
+}

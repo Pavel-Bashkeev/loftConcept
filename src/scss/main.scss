@@ -4,13 +4,14 @@
 @import "./settings/global";
 @import "./settings/sprite";
 
-
 @import "./components/header";
 @import "./components/navigation";
 @import "./particles/mainMenu";
+
 @import 'components/cardProduct';
 @import "./components/product";
 @import "./components/productSeries";
+@import "./components/productAnother";
 
 
 @import "./components/footer";
@@ -20,6 +21,7 @@
 // @import './components/subCategorySection';
 
 // particles
+@import './particles/ral';
 // @import './particles/filtres';
 // @import './particles/sort';
 // Plugins

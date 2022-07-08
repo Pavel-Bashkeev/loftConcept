@@ -14,6 +14,7 @@ import { choicePproductPrivew } from './components/choice.ProductPreview.js';
 // import linkSmooth from './helpers/linkSmooth.js';
 import {Modal} from './plugins/plugModal.js';
 import { showAddServicesWindow } from "./components/showAddServicesWindow.js";
+import { sliderProdAnother } from "./components/sliderProductAnother.js";
 
 documentReady(() => {
   console.log('ready');
@@ -24,7 +25,7 @@ documentReady(() => {
   document.querySelector(".subcategory-content") ? choiceViewCatalog() : '';
   document.querySelector('.product-preview__img') ? choicePproductPrivew() : '';
   showAddServicesWindow();
-
+  sliderProdAnother();
   // linkSmooth();
 
  
