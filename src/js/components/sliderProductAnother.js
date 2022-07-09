@@ -11,7 +11,7 @@ export const sliderProdAnother =() => {
     "slidesPerView": 6,
     "spaceBetween": 20,
     "slidesPerGroup": 6,
-    "speed": 500,
+    "preventInteractionOnTransition": true,
     "loop": true,
     modules: [Navigation, Pagination],
     pagination: {
