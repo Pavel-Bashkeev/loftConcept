@@ -8,21 +8,25 @@
 @import "./components/navigation";
 @import "./particles/mainMenu";
 
+//Page Product
 @import 'components/cardProduct';
 @import "./components/product";
 @import "./components/productSeries";
 @import "./components/productAnother";
+// particles
+@import './particles/ral';
+@import './particles/formWholesale';
 
 
 @import "./components/footer";
 
+// Plugins
+@import './plagins/pluginModal';
 
 // page subcategory
 // @import './components/subCategorySection';
 
-// particles
-@import './particles/ral';
+
 // @import './particles/filtres';
 // @import './particles/sort';
-// Plugins
-@import './plagins/pluginModal';
+

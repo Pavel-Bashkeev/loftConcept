@@ -15,18 +15,18 @@ export const sliderProdAnother =() => {
     "loop": true,
     modules: [Navigation, Pagination],
     pagination: {
-      el: '.product-another__slider-pagination',
+      el: '.another-slider__pagination',
       "clickable": true,
       type: "bullets",
     },
     navigation: {
-      nextEl: '.another-slider__button-next',
-      prevEl: '.another-slider__button-prev',
+      nextEl: '.another-slider__button--next',
+      prevEl: '.another-slider__button--prev',
     },
     breakpoints: {
       // when window width is >= 320px
       320: {
-        slidesPerView: 1.2,
+        slidesPerView: 1.1,
         spaceBetween: 20,
         "slidesPerGroup": 1,
         "centeredSlides": true,
@@ -37,7 +37,10 @@ export const sliderProdAnother =() => {
       480:{
         "slidesPerView": 2,
         "slidesPerGroup": 2,
-        "centeredSlides": false
+        "centeredSlides": false,
+        pagination: {
+          type: "fraction"
+        }
       },
       700: {
         "slidesPerView": 3,
