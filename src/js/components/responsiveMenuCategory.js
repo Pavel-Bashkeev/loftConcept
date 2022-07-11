@@ -16,14 +16,14 @@ export const responsiveMenuCategory = () => {
       breakPoints.push(menuVisibleWidth);
       menuCategoryBtn.classList.remove('hide');
       menuCategoryListHidden.prepend(menuCategoryListVisible.lastChild);
-      menuCategoryBtnCoutn.innerText = breakPoints.length;
-      console.log(menuCategoryListHidden);
+      menuCategoryBtnCoutn.innerText = menuCategoryListHidden.childElementCount;
+      console.log(menuCategoryListHidden.childElementCount)
       updateMenuList();
     } else {
       if(menuMainWidth > breakPoints[breakPoints.length -1]){
         breakPoints.pop();
         menuCategoryListVisible.append(menuCategoryListHidden.firstChild);
-        menuCategoryBtnCoutn.innerText = breakPoints.length;
+        menuCategoryBtnCoutn.innerText = menuCategoryListHidden.childElementCount;
       }
       if(breakPoints.length < 1) {
         menuCategoryBtn.classList.add('hide');
