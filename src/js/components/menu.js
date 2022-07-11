@@ -21,7 +21,7 @@ export const showMenu = () => {
       menuWrap.classList.toggle('open-menu');
       burgerBtn.classList.toggle('active-btn');
       closeAllsubMenu();
-      if(document.body.clientWidth < 950){
+      if(document.body.clientWidth < 1150){
         burgerBtn.classList.toggle('fixed-mob');
       }
     }

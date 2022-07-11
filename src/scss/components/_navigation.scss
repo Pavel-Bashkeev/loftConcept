@@ -9,7 +9,7 @@
     left: 0;
     opacity: 1;
     z-index: 2;
-    @media (max-width:950px) {
+    @media (max-width:1150px) {
       position: fixed;
       width: 100%;
       height: 100%;
@@ -93,7 +93,7 @@
       &::after {
       
         transform: translateY(-50%) scale(-1);
-        @media (max-width:950px) {
+        @media (max-width:1150px) {
           transform: translateY(-50%) scale(1) rotate(-90deg);
         }
       }
@@ -109,7 +109,7 @@
       transform: translateY(-50%) scale(1);
       clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 48% 100%, 75% 50%, 50% 0);
       transition: all 0.3s ease-in-out 0.3s;
-      @media (max-width:950px) {
+      @media (max-width:1150px) {
         transform: translateY(-50%) scale(1) rotate(90deg);
       }
     }
@@ -119,7 +119,7 @@
     left: 100%;
     top: 0;
     display: none;
-    @media (max-width:950px) {
+    @media (max-width:1150px) {
       position: static;
     }
     &.open-submenu {
