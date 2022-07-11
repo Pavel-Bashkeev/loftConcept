@@ -28,7 +28,7 @@ documentReady(() => {
   showMenuCharacter();
   showSubmenuCategory();
   responsiveMenuCharacter();
-
+  responsiveMenuCategory();
   showAddServicesWindow();
  /* Main */
 
@@ -51,7 +51,7 @@ documentReady(() => {
 
 });
 // linkSmooth();
-responsiveMenuCategory();
+
 
 // webpSupportFunctions.isWebp();
 // headerShowScrolling(); нужно доделать
