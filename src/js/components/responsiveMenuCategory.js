@@ -17,7 +17,6 @@ export const responsiveMenuCategory = () => {
       menuCategoryBtn.classList.remove('hide');
       menuCategoryListHidden.prepend(menuCategoryListVisible.lastChild);
       menuCategoryBtnCoutn.innerText = menuCategoryListHidden.childElementCount;
-      console.log(menuCategoryListHidden.childElementCount)
       updateMenuList();
     } else {
       if(menuMainWidth > breakPoints[breakPoints.length -1]){

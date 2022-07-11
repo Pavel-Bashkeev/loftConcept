@@ -14,13 +14,13 @@ export const responsiveMenuCharacter = () => {
       breaks.push(visibleMenuWidth);
       hideMenu.prepend(visibleMenu.lastChild);
       burgerMenuBtn.classList.remove('hide');
-      burgerMenuCount.innerHTML = breaks.length;
+      burgerMenuCount.innerHTML = new String(hideMenu.childElementCount);
       updateMenu()
     } else{
       if(navCharacterWidth > breaks[breaks.length -1]) {
         breaks.pop();
         visibleMenu.append(hideMenu.firstChild);
-        burgerMenuCount.innerHTML = breaks.length;
+        burgerMenuCount.innerHTML = new String(hideMenu.childElementCount);
       }
     }
   }
