@@ -1,18 +1,17 @@
-const menuCategory = document.querySelector('.menu-category'),
-  menuCategoryListVisible = document.querySelector('.menu-category__list-visible'),
-  menuCategoryListHidden = document.querySelector('.menu-category__list-hidden'),
-  menuCategoryBtn = document.querySelector('[data-menu-category-btn]'),
-  menuCategoryBtnCoutn = menuCategoryBtn.querySelector('.main-menu__burger-count');
-let breakPoints = [];
+
 export const responsiveMenuCategory = () => {
-  console.log(menuCategoryListVisible)
-  function updateMenuList() {
+  const menuCategory = document.querySelector('.menu-category'),
+    menuCategoryListVisible = document.querySelector('.menu-category__list-visible'),
+    menuCategoryListHidden = document.querySelector('.menu-category__list-hidden'),
+    menuCategoryBtn = document.querySelector('[data-menu-category-btn]'),
+    menuCategoryBtnCoutn = menuCategoryBtn.querySelector('.main-menu__burger-count');
+  let breakPoints = [];
+  /*function updateMenuList() {
     let menuMainWidth = menuCategoryBtn.classList.contains('hide') ? menuCategory.offsetWidth : menuCategory.offsetWidth - menuCategoryBtn.offsetWidth  + 13;
 
     let menuVisibleWidth = menuCategoryListVisible.offsetWidth;
 
     if(menuMainWidth < menuVisibleWidth) {
-      console.log("main = " + menuMainWidth,    "visible = " + menuVisibleWidth);
       breakPoints.push(menuVisibleWidth);
       menuCategoryBtn.classList.remove('hide');
       menuCategoryListHidden.prepend(menuCategoryListVisible.lastChild);
@@ -21,7 +20,6 @@ export const responsiveMenuCategory = () => {
     } else {
       if(menuMainWidth > breakPoints[breakPoints.length -1]){
         breakPoints.pop();
-        console.log(breakPoints)
         menuCategoryListVisible.append(menuCategoryListHidden.firstChild);
         menuCategoryBtnCoutn.innerText = breakPoints.length;
       }
@@ -39,5 +37,5 @@ export const responsiveMenuCategory = () => {
     }, 200)
   })
   window.addEventListener('resize', updateMenuList);
-  document.addEventListener("DOMContentLoaded", updateMenuList);
+  document.addEventListener("DOMContentLoaded", updateMenuList);*/
 }
