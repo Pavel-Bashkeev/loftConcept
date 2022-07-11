@@ -39,5 +39,5 @@ export const responsiveMenuCategory = () => {
     }, 200)
   })
   window.addEventListener('resize', updateMenuList);
-  document.body.clientWidth  < 1600 ?  updateMenuList() : console.log('noupdeta');
+  document.addEventListener("DOMContentLoaded", updateMenuList);
 }
