@@ -1,12 +1,11 @@
-
+const menuCategory = document.querySelector('.menu-category'),
+  menuCategoryListVisible = document.querySelector('.menu-category__list-visible'),
+  menuCategoryListHidden = document.querySelector('.menu-category__list-hidden'),
+  menuCategoryBtn = document.querySelector('[data-menu-category-btn]'),
+  menuCategoryBtnCoutn = menuCategoryBtn.querySelector('.main-menu__burger-count');
+let breakPoints = [];
 export const responsiveMenuCategory = () => {
-  const menuCategory = document.querySelector('.menu-category'),
-    menuCategoryListVisible = document.querySelector('.menu-category__list-visible'),
-    menuCategoryListHidden = document.querySelector('.menu-category__list-hidden'),
-    menuCategoryBtn = document.querySelector('[data-menu-category-btn]'),
-    menuCategoryBtnCoutn = menuCategoryBtn.querySelector('.main-menu__burger-count');
-  let breakPoints = [];
-  /*function updateMenuList() {
+  function updateMenuList() {
     let menuMainWidth = menuCategoryBtn.classList.contains('hide') ? menuCategory.offsetWidth : menuCategory.offsetWidth - menuCategoryBtn.offsetWidth  + 13;
 
     let menuVisibleWidth = menuCategoryListVisible.offsetWidth;
@@ -37,5 +36,5 @@ export const responsiveMenuCategory = () => {
     }, 200)
   })
   window.addEventListener('resize', updateMenuList);
-  document.addEventListener("DOMContentLoaded", updateMenuList);*/
+  document.body.clientWidth < 1600 ? document.addEventListener("DOMContentLoaded", updateMenuList): '';
 }
