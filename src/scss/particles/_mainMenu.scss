@@ -1,15 +1,59 @@
 .main-menu {
   background-color: var(--white);
-  &__character {
-    border-bottom: 1px solid #c2c2c2;
-    margin-bottom: 10px;
-    padding: 0 0 10px;
+  margin-bottom: 30px;
+
+  &__burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 60px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    border: 1px solid var(--white);
+    background-color: var(--primary);
+
+    &.hide {
+      display: none;
+    }
+
+    &-icon {
+      display: block;
+      transform: rotate(0deg);
+      transition: all .3s ease-in-out;
+    }
+
+    &-count {
+      border-radius: 50%;
+      border: 1px solid var(--white);
+      position: absolute;
+      top: 50%;
+      transform: translate(50%, -50%);
+      left: -50%;
+      background-color: var(--primary);
+      color: var(--white);
+      font-size: 400 12px/22px var(--font);
+      display: block;
+      width: 26px;
+      height: 26px;
+    }
+
+    &.active {
+      .main-menu__burger-icon {
+        transform: rotate(-90deg);
+      }
+    }
   }
 }
+
 .menu-character {
   position: relative;
   display: flex;
   padding:3px 0;
+  margin-bottom: 10px;
   @media (max-width: 1200px) {
     display: none;
   }
@@ -20,7 +64,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 25px;
+    gap: 26px;
   }
   &__list-hidden{
     position: absolute;
@@ -54,6 +98,7 @@
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
+    z-index: 2;
   }
   &__burger{
     background-color: var(--navy-blue);
@@ -119,7 +164,7 @@
     }
   }
   &__btn-text {
-    font: 600 16px/20px var(--font);
+    font: 400 16px/20px var(--font);
     color: var(--gray-800);
     text-transform: uppercase;
   }
@@ -178,7 +223,7 @@
     display: none;
     pointer-events: none;
     transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s,
-      visibility 0.3s ease-in-out;
+    visibility 0.3s ease-in-out 0.3s;
     width:fit-content;
     &.submenu-category--show {
       left: calc(100% + 10px);
@@ -196,6 +241,118 @@
       &:hover {
         background-color: var(--primary);
         color: var(--gray-200);
+      }
+    }
+  }
+}
+
+.menu-category{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+  &__link{
+    font:700 13px/16px var(--font);
+    color:var(--gray-800);
+    text-transform: uppercase;
+    padding: 8px 22px;
+    background: #dcdcdc;
+    border-radius: 15px;
+    display: block;
+    white-space: nowrap;
+  }
+
+  &__list-visible{
+    display: flex;
+    gap:11px;
+  }
+  &__list-hidden {
+    position: absolute;
+    right: 0;
+    top: calc(100%);
+    background-color: #fff;
+    border: 1px solid var(--gray-400);
+    padding: 5px 10px;
+    transform: translateY(20px);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+
+    &.hide {
+      display: none;
+    }
+
+    &.open {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .menu-category__item {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    padding: 10px;
+    border:1px solid var(--gray-800);
+    background-color: #fff;
+    .menu-category__list-item {
+      .menu-category__list {
+        position: static;
+      }
+    }
+    &.open{
+      display: block;
+    }
+  }
+  .menu-category__item{
+    position: relative;
+    &--sale {
+      order: 4;
+
+      .menu-category__link {
+        color: rgb(181, 28, 145);
+      }
+    }
+
+    &--production {
+      order: 5;
+
+      .menu-category__link {
+        color: rgb(42, 85, 200);
+      }
+    }
+
+    &--finishi {
+      order: 6;
+    }
+
+    &--tur {
+      order: 7
+    }
+
+    &--project {
+      order: 8;
+    }
+
+    &:hover {
+      .menu-category__link {
+        background-color: #fff;
+      }
+    }
+    &.active{
+      .menu-category__link{
+        background-color: #fff;
       }
     }
   }

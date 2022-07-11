@@ -1,6 +1,5 @@
 .menu-top {
-  margin-right: 80px;
-  @media (max-width:650px) {
+  @media (max-width:800px) {
     display: none;
   }
   &__list {

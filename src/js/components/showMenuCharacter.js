@@ -28,11 +28,12 @@ export const showMenuCharacter = () => {
       //---- Проверка на выход за пределы экрана
       if(window.innerWidth < (characterMenu.getBoundingClientRect().left + characterMenu.clientWidth)){
         characterMenu.style.right = '10%';
+        characterMenu.classList.add('rightPosition');
       }
       //---- Проверка на выход за пределы экрана
 
       characterSubmenuLinks.forEach((item) => {
-        item.addEventListener("mouseenter", (event) => {
+        item.addEventListener("mouseover", (event) => {
           for (let i = 0; i < characterSubmenuLinks.length; i++) {
             characterSubmenuLinks[i].classList.remove("active");
           }
@@ -42,10 +43,6 @@ export const showMenuCharacter = () => {
             if (item.nextElementSibling) {
               item.classList.add("active");
               item.nextElementSibling.style.display = "block";
-              if (window.innerWidth - 100 <= (item.nextElementSibling.getBoundingClientRect().left + item.nextElementSibling.scrollWidth)) {
-                item.nextElementSibling.style.right = '101%';
-                item.nextElementSibling.style.left = 'auto';
-              }
               setTimeout(() => {
                 item.nextElementSibling.classList.add("submenu-category--show");
               }, 300);
@@ -53,7 +50,6 @@ export const showMenuCharacter = () => {
         });
       });
       characterMenu.addEventListener('mouseleave', (event) => {
-        console.log(event.target);
         if(event.target.classList.contains('submenu-character')) {
           characterMenu.classList.remove('submenu-character--show')
           characterSubmenu.classList.remove('submenu-category--show')
@@ -62,7 +58,6 @@ export const showMenuCharacter = () => {
           }
           for (let i = 0; i < characterSubmenuLinks.length; i++) {
             characterSubmenuLinks[i].classList.remove("active");
-
           }
         }
       })

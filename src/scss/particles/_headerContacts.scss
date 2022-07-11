@@ -3,22 +3,40 @@
   align-items: center;
   gap: 15px;
   width: 100%;
-  @media (max-width:420px) {
-    gap:10px;
+  margin-left: auto;
+  justify-content: flex-end;
+  @media (max-width: 1350px) {
+    width: 440px;
+    //margin-left: auto;
+  }
+  @media (max-width:1150px) {
+    flex-wrap: wrap;
+    width: 75px;
+    gap: 5px;
   }
   &__link {
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    height: 40px;
     justify-content: space-between;
     background-color: #2960b3;
     color: var(--white);
     transition: all 0.3s ease-in-out;
     padding: 5px 10px;
-    gap: 5px;
+    gap: 10px;
     border-radius: 10px;
-    max-width: 175px;
-    width: 100%;
-    &:hover {
+    max-width: 210px;
+    flex: 1;
+    @media (max-width: 1150px) {
+      gap: 7px;
+      flex: auto;
+      width: 35px;
+      height: 30px;
+      border-radius: 5px;
+      justify-content: center;
+      padding: 0;
+    }
+    /*&:hover {
       box-shadow: 0px 0px 5px rgb(48, 48, 48);
       .header-contact__icon--whatsapp{
         color: #39ae41;
@@ -30,17 +48,34 @@
       .header-contact__icon--mail{
         transform: scale(1);
       }
-    }
+    }*/
     &:first-child {
       margin-left: auto;
     }
-    @media (max-width: 1100px) {
-      max-width: fit-content;
+    &--mail{
+      display: none;
+      @media (max-width: 1150px) {
+        display: flex
+      }
+    }
+    &--another{
+      display: none;
+      @media (max-width: 1150px) {
+        display: flex;
+      }
+    }
+    &--mail,&--phone{
+      svg{
+        display: none;
+        @media (max-width: 1150px) {
+          display: block;
+        }
+      }
     }
   }
   &__icon {
     display: block;
-    transform: scale(0.8);
+    transform: scale(0.9);
     transition: all .3s ease-in-out;
     &--mail {
       width: 30px;
@@ -57,9 +92,9 @@
   }
   &__text {
     color: inherit;
-    font: 400 12px/14px var(--font);
-    align-self: center;
-    @media (max-width:960px) {
+    font: 600 17px/18px var(--font);
+    letter-spacing: 0.2px;
+    @media (max-width:1150px) {
       display: none;
     }
   }

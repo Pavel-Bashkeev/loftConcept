@@ -26,7 +26,7 @@ export const sliderProdAnother =() => {
     breakpoints: {
       // when window width is >= 320px
       320: {
-        slidesPerView: 1.1,
+        slidesPerView: 1,
         spaceBetween: 20,
         "slidesPerGroup": 1,
         "centeredSlides": true,
