@@ -117,7 +117,7 @@
   &__sale {
     margin: 0;
     color: var(--gray-600);
-    font: 600 22px/27px var(--font);
+    font: 600 18px/22px var(--font);
 
     &-text {
       text-decoration-color: transparent;
@@ -126,6 +126,7 @@
       &::after {
         content: '';
         position: absolute;
+        top: 50%;
         top: 50%;
         left: 0;
         background-color: var(--gray-600);
@@ -136,7 +137,7 @@
   }
 
   &__current {
-    font: 700 35px/37px var(--font);
+    font: 700 30px/33px var(--font);
     letter-spacing: 1px;
     margin: 0;
     color: var(--gray-900);
@@ -263,7 +264,7 @@
   &__select{
     height: 40px;
     border-radius: 30px;
-    font:400 16px/18px var(--font);
+    font:400 15px/18px var(--font);
     color: var(--gray-800);
     padding: 0 10px;
     cursor: pointer;

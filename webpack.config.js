@@ -53,7 +53,10 @@ module.exports = {
               }
             }
           },
-          'sass-loader'
+          {
+            loader: 'group-css-media-queries-loader'
+          },
+          'sass-loader',
         ]
       },
       {

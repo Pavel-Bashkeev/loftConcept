@@ -24,16 +24,20 @@
         background-color: var(--gray-800);
         clip-path: polygon(45% 0, 100% 50%, 45% 100%, 30% 100%, 85% 50%, 30% 0);
       }
-      color: var(--primary)
+      color: var(--gray-600);
+      transition: all .3s ease-in-out;
+      &:hover{
+        color: var(--gray-800);
+      }
     }
     &:last-child{
       .breadcrumbs__link{
         pointer-events: none;
+        color: var(--gray-600);
       }
     }
   }
   &__link{
     font:600 15px/17px var(--font);
-    color: (--gray-800);
   }
 }

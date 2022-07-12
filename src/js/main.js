@@ -27,8 +27,8 @@ documentReady(() => {
   lazyImages();
   showMenuCharacter();
   showSubmenuCategory();
-  responsiveMenuCharacter();
-  responsiveMenuCategory();
+    responsiveMenuCharacter();
+   responsiveMenuCategory();
   showAddServicesWindow();
  /* Main */
 

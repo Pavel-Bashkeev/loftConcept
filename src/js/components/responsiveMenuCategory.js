@@ -5,8 +5,8 @@ const menuCategory = document.querySelector('.menu-category'),
   menuCategoryBtnCoutn = menuCategoryBtn.querySelector('.main-menu__burger-count');
 let breakPoints = [];
 export const responsiveMenuCategory = () => {
-  window.addEventListener('resize', updateMenuList);
-  document.body.clientWidth < 1600 ? document.addEventListener("DOMContentLoaded", updateMenuList): '';
+
+
   function updateMenuList() {
     let menuMainWidth = menuCategoryBtn.classList.contains('hide') ? menuCategory.offsetWidth : menuCategory.offsetWidth - menuCategoryBtn.offsetWidth  + 13;
 
@@ -36,6 +36,7 @@ export const responsiveMenuCategory = () => {
     setTimeout(()=>{
       menuCategoryListHidden.classList.toggle('open')
     }, 200)
-  })
-
+  });
+  window.addEventListener('resize', updateMenuList);
+  document.body.clientWidth < 1600 ? document.addEventListener("DOMContentLoaded", updateMenuList): '';
 }
