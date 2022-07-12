@@ -186,7 +186,6 @@
   pointer-events: none;
   opacity: 0;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
-  width: 400px;
   &.submenu-character--show {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     opacity: 1;
@@ -198,9 +197,10 @@
   }
   &__link {
     transition: all 0.3s ease-in-out;
-    padding: 3px 5px;
+    padding: 10px 5px;
     border-radius: 5px;
     font: 400 14px/16px var(--font);
+    white-space: nowrap;
     &:hover {
       background-color: var(--primary);
       color: var(--gray-200);
@@ -239,6 +239,7 @@
       padding: 3px 5px;
       border-radius: 5px;
       font: 400 14px/16px var(--font);
+      white-space: nowrap;
       &:hover {
         background-color: var(--primary);
         color: var(--gray-200);
@@ -412,6 +413,7 @@
       position: relative;
       & > .menu-category__list{
         padding: 20px 60px;
+        min-width: 100%;
         .menu-category__list-item{
           &:not(:last-child){
             margin-bottom: 10px;
@@ -419,6 +421,23 @@
         }
         .menu-category__list-link{
           white-space: nowrap;
+        }
+      }
+      .menu-category__link{
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 0;
+        border-bottom-color: transparent;
+        position: relative;
+        z-index: 1;
+        &::after{
+          content:'';
+          position: absolute;
+          height: 10px;
+          width: 100%;
+          background-color: var(--white);
+          left: 0;
+          bottom: -6px;
         }
       }
     }

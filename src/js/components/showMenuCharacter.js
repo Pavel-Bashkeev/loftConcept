@@ -5,6 +5,7 @@ export const showMenuCharacter = () => {
   characterBtns.forEach((item) => {
     item.addEventListener("click", () => {
       const characterMenu = item.nextElementSibling;
+      if(!characterMenu) return;
       const characterSubmenu = characterMenu.querySelector(".submenu-category");
       const characterSubmenuLinks = characterMenu.querySelectorAll(
         ".submenu-character__link"
@@ -23,12 +24,11 @@ export const showMenuCharacter = () => {
       characterMenu.style.display = 'flex';
       setTimeout(()=>{
         characterMenu.classList.toggle("submenu-character--show");
-      }, 300);
+      }, 100);
 
       //---- Проверка на выход за пределы экрана
       if(window.innerWidth < (characterMenu.getBoundingClientRect().left + characterMenu.clientWidth)){
         characterMenu.style.right = '10%';
-        characterMenu.classList.add('rightPosition');
       }
       //---- Проверка на выход за пределы экрана
 
@@ -43,9 +43,16 @@ export const showMenuCharacter = () => {
             if (item.nextElementSibling) {
               item.classList.add("active");
               item.nextElementSibling.style.display = "block";
-              setTimeout(() => {
-                item.nextElementSibling.classList.add("submenu-category--show");
-              }, 300);
+              console.log(item.nextElementSibling.getBoundingClientRect().right )
+              console.log(item.nextElementSibling.clientWidth)
+              console.log(window.innerWidth);
+              if(window.innerWidth < (item.nextElementSibling.getBoundingClientRect().right + item.nextElementSibling.clientWidth)){
+                item.nextElementSibling.style.right = '100%';
+                item.nextElementSibling.style.left = 'auto';
+                console.log('right position')
+              }
+              item.nextElementSibling.classList.add("submenu-category--show");
+
             }
         });
       });
