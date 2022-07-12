@@ -41,6 +41,10 @@
     font: 400 20px/24px var(--font);
     margin: 0;
     padding: 10px 15px;
+    @media (max-width: 500px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__items {
