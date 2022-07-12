@@ -441,8 +441,8 @@
         font-size: 16px;
       }
       @media (max-width: 500px) {
-        color:var(--gray-900);
-        font-size: 15px;
+        color:var(--gray-700);
+        font-size: 14px;
       }
     }
 
@@ -467,9 +467,9 @@
         font-size: 16px;
       }
       @media (max-width:500px) {
-        font-size: 15px;
+        font-size: 14px;
         &:not(.prop-list__item-value--link){
-          color: var(--gray-700)
+          color: var(--gray-900)
         }
       }
     }
@@ -483,8 +483,8 @@
     color: var(--gray-800);
     text-transform: uppercase;
     @media (max-width: 500px) {
-      font-size: 22px;
-      line-height: 28px;
+      font-size: 18px;
+      line-height: 22px;
     }
   }
   &__text{
@@ -494,7 +494,7 @@
       margin-bottom: 5px;
     }
     @media (max-width: 500px) {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 22px;
     }
   }
